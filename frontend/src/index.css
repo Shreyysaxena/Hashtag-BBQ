@@ -144,7 +144,15 @@ code {
 
   /* Quick Action Buttons */
   .quick-action-btn {
-    @apply px-6 py-3 bg-white/10 backdrop-blur-sm border border-white text-white rounded-lg hover:bg-white hover:text-cafe-brown transition-all duration-300 flex items-center space-x-2;
+    @apply px-6 py-3 border border-white text-white rounded-lg flex items-center space-x-2;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  .quick-action-btn:hover {
+    background: white;
+    color: var(--cafe-brown);
   }
 
   /* Menu Cards */
