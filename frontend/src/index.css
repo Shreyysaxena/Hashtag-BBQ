@@ -131,7 +131,7 @@ code {
   .cta-primary:hover {
     opacity: 0.9;
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(120, 82, 60, 0.3);
+    box-shadow: 0 10px 20px rgba(84, 145, 126, 0.3);
   }
 
   .cta-secondary {
