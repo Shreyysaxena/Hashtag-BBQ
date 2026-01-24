@@ -123,11 +123,13 @@ code {
 
   /* CTA Buttons */
   .cta-primary {
-    @apply bg-cafe-brown hover:bg-cafe-brown/90 text-white;
+    @apply text-white;
+    background-color: var(--cafe-brown);
     transition: all 0.3s ease;
   }
 
   .cta-primary:hover {
+    opacity: 0.9;
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(120, 82, 60, 0.3);
   }
