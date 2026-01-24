@@ -115,26 +115,26 @@ const LandingPage = () => {
         </div>
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <h1 className="hero-title text-5xl md:text-7xl font-serif font-bold text-white mb-6">
+          <h1 className="hero-title text-4xl md:text-6xl font-bold text-white mb-4">
             Where Every Sip<br />Feels Like Home
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Experience the warmth of artisanal coffee and handcrafted delights at Bangalore's most beloved neighborhood cafe
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
-              size="lg" 
+              size="default" 
               onClick={() => scrollToSection('menu')}
-              className="cta-primary text-lg px-8 py-6"
+              className="cta-primary px-6 py-5"
             >
               View Menu
             </Button>
             <Button 
-              size="lg" 
+              size="default" 
               variant="outline"
               onClick={() => scrollToSection('reserve')}
-              className="cta-secondary text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-cafe-brown"
+              className="cta-secondary px-6 py-5 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-cafe-brown"
             >
               Reserve a Table
             </Button>
