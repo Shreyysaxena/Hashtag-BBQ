@@ -388,10 +388,10 @@ const LandingPage = () => {
       <section className="section-padding bg-cafe-cream">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="section-title text-4xl md:text-5xl font-serif font-bold text-cafe-brown mb-4">
+            <h2 className="section-title text-3xl md:text-4xl font-bold text-cafe-brown mb-4">
               Meet Our Team
             </h2>
-            <p className="text-lg text-cafe-brown/70">Friendly faces serving with heart and passion</p>
+            <p className="text-base text-cafe-brown/70">Friendly faces serving with heart and passion</p>
           </div>
 
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
