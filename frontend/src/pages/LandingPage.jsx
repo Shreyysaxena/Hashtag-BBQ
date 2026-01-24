@@ -190,10 +190,10 @@ const LandingPage = () => {
       <section id="menu" className="section-padding bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="section-title text-4xl md:text-5xl font-serif font-bold text-cafe-brown mb-4">
+            <h2 className="section-title text-3xl md:text-4xl font-bold text-cafe-brown mb-4">
               Signature Menu Highlights
             </h2>
-            <p className="text-lg text-cafe-brown/70">Handcrafted with love, served with care</p>
+            <p className="text-base text-cafe-brown/70">Handcrafted with love, served with care</p>
           </div>
 
           {/* Category Tabs */}
