@@ -171,10 +171,10 @@ const LandingPage = () => {
               />
             </div>
             <div className="story-content">
-              <h2 className="section-title text-4xl md:text-5xl font-serif font-bold text-cafe-brown mb-6">
+              <h2 className="section-title text-3xl md:text-4xl font-bold text-cafe-brown mb-6">
                 {ownerStory.title}
               </h2>
-              <p className="text-lg text-cafe-brown/80 leading-relaxed mb-6">
+              <p className="text-base text-cafe-brown/80 leading-relaxed mb-6">
                 {ownerStory.content}
               </p>
               <div className="flex items-center space-x-4">
