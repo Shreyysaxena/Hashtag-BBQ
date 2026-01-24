@@ -375,7 +375,7 @@ const LandingPage = () => {
                   </select>
                 </div>
 
-                <Button type="submit" className="w-full bg-cafe-brown hover:bg-cafe-brown/90 py-6 text-lg">
+                <Button type="submit" className="w-full bg-cafe-brown hover:bg-cafe-brown/90 py-5">
                   Reserve Your Table
                 </Button>
               </form>
