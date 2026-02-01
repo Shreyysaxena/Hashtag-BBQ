@@ -109,7 +109,12 @@ const LandingPage = () => {
           <img
             src="https://customer-assets.emergentagent.com/job_trc-cafe/artifacts/9zwrmquw_1.png"
             alt="Ritu's Cafe Interior"
-            className="w-full h-full object-cover" />
+            className="w-full h-full object-cover object-center"
+            style={{
+              imageRendering: '-webkit-optimize-contrast',
+              transform: 'scale(1.1)',
+              filter: 'contrast(1.05) brightness(1.02)'
+            }} />
 
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
         </div>
