@@ -123,33 +123,33 @@ const LandingPage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="default"
+            <Button 
+              size="default" 
               onClick={() => scrollToSection('menu')}
-              className="inline-flex items-center justify-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-primary/90 h-9 cta-primary !font-medium !text-sm gap-2 px-6 py-5 rounded-md shadow text-primary-foreground !bg-[rgba(12,45,38,0.9)]">
-
+              className="cta-primary px-8 py-5 text-base font-semibold shadow-lg"
+            >
               View Menu
             </Button>
-            <Button
-              size="default"
+            <Button 
+              size="default" 
               variant="outline"
               onClick={() => scrollToSection('reserve')}
-              className="cta-secondary px-6 py-5 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-cafe-brown">
-
+              className="cta-secondary px-8 py-5 text-base font-semibold bg-white/95 backdrop-blur-sm border-2 border-white text-cafe-brown hover:bg-white hover:scale-105 shadow-lg"
+            >
               Reserve a Table
             </Button>
           </div>
 
           <div className="flex flex-wrap gap-4 justify-center mt-8">
-            <a href={cafeInfo.orderLinks.phone} className="quick-action-btn">
+            <a href={cafeInfo.orderLinks.phone} className="quick-action-btn shadow-md">
               <Phone size={20} />
-              <span>Call Now</span>
+              <span className="font-medium">Call Now</span>
             </a>
-            <a href={cafeInfo.orderLinks.zomato} target="_blank" rel="noopener noreferrer" className="quick-action-btn">
-              <span>Order on Zomato</span>
+            <a href={cafeInfo.orderLinks.zomato} target="_blank" rel="noopener noreferrer" className="quick-action-btn shadow-md">
+              <span className="font-medium">Order on Zomato</span>
             </a>
-            <a href={cafeInfo.orderLinks.swiggy} target="_blank" rel="noopener noreferrer" className="quick-action-btn">
-              <span>Order on Swiggy</span>
+            <a href={cafeInfo.orderLinks.swiggy} target="_blank" rel="noopener noreferrer" className="quick-action-btn shadow-md">
+              <span className="font-medium">Order on Swiggy</span>
             </a>
           </div>
         </div>
