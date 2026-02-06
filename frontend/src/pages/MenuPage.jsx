@@ -148,22 +148,22 @@ const MenuPage = () => {
       {/* Main Content */}
       <div className="flex flex-1">
         {/* Sidebar - Categories */}
-        <aside className="hidden md:block w-64 bg-white border-r border-gray-200 overflow-y-auto">
-          <div className="p-4">
-            <h2 className="text-lg font-bold text-gray-800 mb-4">Menu Categories</h2>
+        <aside className="hidden md:block w-52 bg-white border-r border-gray-200 overflow-y-auto">
+          <div className="p-3">
+            <h2 className="text-sm font-semibold text-gray-800 mb-3">Menu Categories</h2>
             <nav className="space-y-1">
               {menuCategories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-200 flex items-center space-x-3 ${
+                  className={`w-full text-left px-3 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2 ${
                     selectedCategory === category.id
                       ? 'bg-[#579c2c] text-white font-medium'
                       : 'text-gray-700 hover:bg-gray-100'
                   }`}
                 >
-                  <span className="text-xl">{category.icon}</span>
-                  <span>{category.name}</span>
+                  <span className="text-base">{category.icon}</span>
+                  <span className="text-sm">{category.name}</span>
                 </button>
               ))}
             </nav>
@@ -172,12 +172,12 @@ const MenuPage = () => {
 
         {/* Mobile Category Tabs */}
         <div className="md:hidden w-full bg-white border-b border-gray-200 overflow-x-auto">
-          <div className="flex space-x-2 p-3">
+          <div className="flex space-x-2 p-2">
             {menuCategories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-2 rounded-lg whitespace-nowrap text-sm font-medium transition-colors ${
+                className={`px-3 py-1.5 rounded-lg whitespace-nowrap text-xs font-medium transition-colors ${
                   selectedCategory === category.id
                     ? 'bg-[#579c2c] text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
