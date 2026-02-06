@@ -22,13 +22,10 @@ const OrderTypePage = () => {
   };
 
   const handleReserveTable = () => {
-    // Store reservation intent for backend integration later
+    // Store reservation intent and navigate to reservation form
     localStorage.setItem('orderType', 'reservation');
     localStorage.setItem('selectedOutlet', selectedOutlet);
-    localStorage.setItem('reservationDate', new Date().toISOString());
-    
-    // Navigate to menu page (or reservation page in future)
-    navigate('/menu');
+    navigate('/reservation');
   };
 
   return (
