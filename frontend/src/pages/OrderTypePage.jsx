@@ -58,7 +58,7 @@ const OrderTypePage = () => {
                   : 'border-gray-300 hover:border-[#579c2c]/50'
               }`}
             >
-              <Truck size={28} className={orderType === 'delivery' ? 'text-[#579c2c]' : 'text-gray-400'} />
+              <Bike size={28} className={orderType === 'delivery' ? 'text-[#579c2c]' : 'text-gray-400'} />
               <span className={`text-sm font-medium ${orderType === 'delivery' ? 'text-[#579c2c]' : 'text-gray-700'}`}>
                 Delivery
               </span>
@@ -72,9 +72,9 @@ const OrderTypePage = () => {
                   : 'border-gray-300 hover:border-[#579c2c]/50'
               }`}
             >
-              <Package size={28} className={orderType === 'pickup' ? 'text-[#579c2c]' : 'text-gray-400'} />
+              <Store size={28} className={orderType === 'pickup' ? 'text-[#579c2c]' : 'text-gray-400'} />
               <span className={`text-sm font-medium ${orderType === 'pickup' ? 'text-[#579c2c]' : 'text-gray-700'}`}>
-                Pickup
+                Pickup / Dine-In
               </span>
             </button>
           </div>
