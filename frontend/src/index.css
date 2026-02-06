@@ -43,11 +43,10 @@ code {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
 
-    /* Cafe Brand Colors */
-    --cafe-brown: #54917e;
-    --cafe-cream: #f7f5f2;
-    --cafe-olive: #8b956d;
-    --cafe-beige: #d4c5b9;
+    /* Restaurant Brand Colors */
+    --restaurant-green: #579c2c;
+    --restaurant-green-light: #6bb83a;
+    --restaurant-green-dark: #457821;
   }
 
   .dark {
@@ -87,137 +86,43 @@ code {
   }
 }
 
-@layer components {
-  /* Typography */
-  .font-serif {
-    font-family: 'Poppins', sans-serif;
+@layer utilities {
+  .text-restaurant-green {
+    color: var(--restaurant-green);
   }
+  .bg-restaurant-green {
+    background-color: var(--restaurant-green);
+  }
+  .border-restaurant-green {
+    border-color: var(--restaurant-green);
+  }
+  .hover\:bg-restaurant-green:hover {
+    background-color: var(--restaurant-green);
+  }
+}
 
-  .section-padding {
-    @apply py-20 md:py-28;
-  }
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
 
-  .section-title {
-    animation: fadeInUp 0.8s ease-out;
-  }
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
 
-  /* Navigation */
-  .nav-link {
-    @apply transition-colors duration-300 font-medium;
-    color: var(--cafe-brown);
-  }
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
 
-  .nav-link:hover {
-    opacity: 0.7;
-  }
+::-webkit-scrollbar-thumb {
+  background: var(--restaurant-green);
+  border-radius: 4px;
+}
 
-  /* Hero Section */
-  .hero-section {
-    animation: fadeIn 1s ease-out;
-  }
-
-  .hero-title {
-    animation: fadeInUp 1s ease-out 0.3s both;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-  }
-
-  /* CTA Buttons */
-  .cta-primary {
-    @apply text-white;
-    background-color: var(--cafe-brown);
-    transition: all 0.3s ease;
-  }
-
-  .cta-primary:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(84, 145, 126, 0.3);
-  }
-
-  .cta-secondary {
-    transition: all 0.3s ease;
-  }
-
-  .cta-secondary:hover {
-    transform: translateY(-2px);
-  }
-
-  /* Quick Action Buttons */
-  .quick-action-btn {
-    @apply px-6 py-3 border border-white text-white rounded-lg flex items-center space-x-2;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-  }
-
-  .quick-action-btn:hover {
-    background: white;
-    color: var(--cafe-brown);
-  }
-
-  /* Menu Cards */
-  .menu-card {
-    transition: all 0.3s ease;
-  }
-
-  .menu-card:hover {
-    transform: translateY(-4px);
-  }
-
-  /* Order Cards */
-  .order-card {
-    transition: all 0.3s ease;
-  }
-
-  .order-card:hover {
-    transform: translateY(-4px);
-  }
-
-  /* Team Cards */
-  .team-card {
-    transition: all 0.3s ease;
-  }
-
-  .team-card:hover {
-    transform: translateY(-4px);
-  }
-
-  /* Testimonial Cards */
-  .testimonial-card {
-    transition: all 0.3s ease;
-  }
-
-  .testimonial-card:hover {
-    transform: translateY(-4px);
-  }
-
-  /* Gallery */
-  .gallery-item {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .gallery-item::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.6));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  .gallery-item:hover::after {
-    opacity: 1;
-  }
-
-  /* Story Section */
-  .story-content {
-    animation: fadeInUp 0.8s ease-out;
-  }
-
-  .story-image-wrapper {
-    animation: fadeIn 1s ease-out;
-  }
+::-webkit-scrollbar-thumb:hover {
+  background: var(--restaurant-green-dark);
 }
 
 /* Animations */
@@ -230,10 +135,10 @@ code {
   }
 }
 
-@keyframes fadeInUp {
+@keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -241,47 +146,18 @@ code {
   }
 }
 
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--cafe-cream);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--cafe-brown);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #5f3f2d;
-}
-
-/* Tailwind Custom Colors */
-@layer utilities {
-  .text-cafe-brown {
-    color: var(--cafe-brown);
-  }
-  .bg-cafe-brown {
-    background-color: var(--cafe-brown);
-  }
-  .bg-cafe-cream {
-    background-color: var(--cafe-cream);
-  }
-  .bg-cafe-olive {
-    background-color: var(--cafe-olive);
-  }
-  .bg-cafe-beige {
-    background-color: var(--cafe-beige);
-  }
-  .border-cafe-brown {
-    border-color: var(--cafe-brown);
-  }
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
