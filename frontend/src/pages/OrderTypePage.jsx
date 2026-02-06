@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Package, Truck } from 'lucide-react';
+import { Store, Bike } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { restaurantInfo } from '../restaurantMock';
 
