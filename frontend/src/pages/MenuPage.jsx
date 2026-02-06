@@ -89,7 +89,7 @@ const MenuPage = () => {
 
             {/* Veg/Non-Veg Filter and Cart */}
             <div className="flex items-center space-x-3">
-              <div className="flex items-center space-x-1 bg-gray-100 rounded-lg p-0.5">
+              <div className="hidden md:flex items-center space-x-1 bg-gray-100 rounded-lg p-0.5">
                 <button
                   onClick={() => setVegFilter('veg')}
                   className={`px-2 py-1 rounded-md text-xs font-medium transition-colors ${
