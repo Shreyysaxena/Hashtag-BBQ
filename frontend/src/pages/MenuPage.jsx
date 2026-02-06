@@ -142,7 +142,7 @@ const MenuPage = () => {
       <div className="flex flex-1">
         {/* Sidebar - Categories */}
         <aside className="hidden md:block w-60 bg-white border-r border-gray-200 overflow-y-auto">
-          <div className="p-4">
+          <div className="flex-1 overflow-y-auto p-4">
             {/* Logo */}
             <div className="mb-6 pb-4 border-b border-gray-200">
               <img 
