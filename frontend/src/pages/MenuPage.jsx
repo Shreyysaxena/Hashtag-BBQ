@@ -207,7 +207,7 @@ const MenuPage = () => {
               {getFilteredItems().map((item) => (
                 <div
                   key={item.id}
-                  className="bg-white rounded-lg shadow-sm border overflow-hidden hover:shadow-md transition-shadow duration-200"
+                  className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow duration-200"
                 >
                   <div className="flex">
                     {/* Item Image */}
