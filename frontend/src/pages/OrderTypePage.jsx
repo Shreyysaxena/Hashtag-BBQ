@@ -31,14 +31,14 @@ const OrderTypePage = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Header */}
-      <div className="bg-white shadow-sm py-4 border-b">
+      <div className="bg-white shadow-sm py-6 border-b">
         <div className="container mx-auto px-4 text-center">
           <img 
             src={restaurantInfo.logo} 
             alt={restaurantInfo.name}
-            className="h-16 mx-auto mb-2 object-contain"
+            className="h-32 mx-auto mb-3 object-contain"
           />
-          <p className="text-sm text-gray-600 mt-1">{restaurantInfo.tagline}</p>
+          <p className="text-sm text-gray-600 mt-2">{restaurantInfo.tagline}</p>
         </div>
       </div>
 
