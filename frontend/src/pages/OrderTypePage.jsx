@@ -21,6 +21,16 @@ const OrderTypePage = () => {
     }
   };
 
+  const handleReserveTable = () => {
+    // Store reservation intent for backend integration later
+    localStorage.setItem('orderType', 'reservation');
+    localStorage.setItem('selectedOutlet', selectedOutlet);
+    localStorage.setItem('reservationDate', new Date().toISOString());
+    
+    // Navigate to menu page (or reservation page in future)
+    navigate('/menu');
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Header */}
@@ -115,7 +125,7 @@ const OrderTypePage = () => {
         {/* Action Buttons */}
         <div className="grid grid-cols-2 gap-3">
           <Button
-            onClick={() => handleProceed('later')}
+            onClick={handleReserveTable}
             size="default"
             className="bg-[#579c2c]/80 hover:bg-[#579c2c]/90 text-white py-5 text-sm"
           >
@@ -123,7 +133,7 @@ const OrderTypePage = () => {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span>Order for Later</span>
+              <span>Reserve a Table</span>
             </div>
           </Button>
 
