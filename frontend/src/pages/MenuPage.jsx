@@ -154,6 +154,15 @@ const MenuPage = () => {
         {/* Sidebar - Categories */}
         <aside className="hidden md:block w-60 bg-white border-r border-gray-200 overflow-y-auto">
           <div className="p-3">
+            {/* Logo */}
+            <div className="mb-4 pb-3 border-b border-gray-200">
+              <img 
+                src={restaurantInfo.logo} 
+                alt={restaurantInfo.name}
+                className="h-14 mx-auto object-contain"
+              />
+            </div>
+            
             <h2 className="text-sm font-semibold text-gray-800 mb-3">Menu Categories</h2>
             <nav className="space-y-1">
               {menuCategories.map((category) => (
