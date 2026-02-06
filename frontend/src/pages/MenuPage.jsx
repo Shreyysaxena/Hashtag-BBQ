@@ -148,7 +148,7 @@ const MenuPage = () => {
       {/* Main Content */}
       <div className="flex flex-1">
         {/* Sidebar - Categories */}
-        <aside className="hidden md:block w-52 bg-white border-r border-gray-200 overflow-y-auto">
+        <aside className="hidden md:block w-60 bg-white border-r border-gray-200 overflow-y-auto">
           <div className="p-3">
             <h2 className="text-sm font-semibold text-gray-800 mb-3">Menu Categories</h2>
             <nav className="space-y-1">
@@ -156,13 +156,12 @@ const MenuPage = () => {
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`w-full text-left px-3 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2 ${
+                  className={`w-full text-left px-3 py-2.5 rounded-lg transition-all duration-200 ${
                     selectedCategory === category.id
                       ? 'bg-[#579c2c] text-white font-medium'
                       : 'text-gray-700 hover:bg-gray-100'
                   }`}
                 >
-                  <span className="text-base">{category.icon}</span>
                   <span className="text-sm">{category.name}</span>
                 </button>
               ))}
@@ -183,7 +182,7 @@ const MenuPage = () => {
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
-                {category.icon} {category.name}
+                {category.name}
               </button>
             ))}
           </div>
