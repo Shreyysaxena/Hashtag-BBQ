@@ -3,7 +3,7 @@
 export const restaurantInfo = {
   name: "Hashtag BBQ",
   tagline: "Authentic BBQ & Grills",
-  logo: "https://customer-assets.emergentagent.com/job_trc-cafe/artifacts/ipogsbl9_image.png",
+  logo: "https://customer-assets.emergentagent.com/job_trc-cafe/artifacts/nlk4e25b_ChatGPT%20Image%20Feb%206%2C%202026%2C%2003_46_52%20PM.png",
   primaryColor: "#579c2c",
   outlets: [
     {
