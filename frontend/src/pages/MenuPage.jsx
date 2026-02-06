@@ -208,36 +208,33 @@ const MenuPage = () => {
                 >
                   <div className="flex">
                     {/* Item Image */}
-                    <div className="w-24 h-24 flex-shrink-0">
+                    <div className="w-28 h-28 flex-shrink-0 p-2">
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-md"
                       />
                     </div>
 
                     {/* Item Details */}
                     <div className="flex-1 p-3 flex flex-col">
-                      <div className="flex items-start justify-between mb-1">
+                      <div className="flex items-start justify-between mb-1.5">
                         <div className="flex-1">
-                          <div className="flex items-center space-x-1.5">
+                          <div className="flex items-center space-x-2">
                             {/* Veg/Non-Veg Indicator */}
-                            <div className={`w-3 h-3 border flex items-center justify-center ${
+                            <div className={`w-3.5 h-3.5 border flex items-center justify-center ${
                               item.veg ? 'border-green-600' : 'border-red-600'
                             }`}>
-                              <div className={`w-1.5 h-1.5 rounded-full ${
+                              <div className={`w-2 h-2 rounded-full ${
                                 item.veg ? 'bg-green-600' : 'bg-red-600'
                               }`}></div>
                             </div>
-                            <h3 className="font-semibold text-sm text-gray-800">{item.name}</h3>
+                            <h3 className="font-semibold text-sm text-gray-800 leading-tight">{item.name}</h3>
                           </div>
-                          {item.bestseller && (
-                            <Badge className="mt-0.5 bg-yellow-500 text-[10px] px-1.5 py-0">Bestseller</Badge>
-                          )}
                         </div>
                       </div>
 
-                      <p className="text-gray-600 text-xs mb-2 line-clamp-2">
+                      <p className="text-gray-600 text-xs mb-2 line-clamp-2 leading-relaxed">
                         {item.description}
                       </p>
 
@@ -254,7 +251,7 @@ const MenuPage = () => {
                         </div>
                         <Button
                           onClick={() => handleAddToCart(item)}
-                          className="bg-[#579c2c] hover:bg-[#579c2c]/90 text-white px-4 py-1 h-8 text-xs"
+                          className="bg-[#579c2c] hover:bg-[#579c2c]/90 text-white px-4 py-1.5 h-auto text-sm font-medium"
                         >
                           Add
                         </Button>
