@@ -142,13 +142,14 @@ const MenuPage = () => {
       <div className="flex flex-1">
         {/* Sidebar - Categories */}
         <aside className="hidden md:block w-60 bg-white border-r border-gray-200 overflow-y-auto">
-          <div className="p-3">
+          <div className="p-4">
             {/* Logo */}
-            <div className="mb-4 pb-3 border-b border-gray-200">
+            <div className="mb-6 pb-4 border-b border-gray-200">
               <img 
                 src={restaurantInfo.logo} 
                 alt={restaurantInfo.name}
-                className="h-14 mx-auto object-contain"
+                className="h-24 w-full object-contain cursor-pointer"
+                onClick={() => navigate('/')}
               />
             </div>
             
