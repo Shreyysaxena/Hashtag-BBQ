@@ -139,7 +139,7 @@ const MenuPage = () => {
       </header>
 
       {/* Main Content */}
-      <div className="flex flex-1">
+      <div className="flex flex-1 flex-col md:flex-row">
         {/* Sidebar - Categories */}
         <aside className="hidden md:block w-60 bg-white border-r border-gray-200 overflow-y-auto">
           <div className="flex-1 overflow-y-auto p-4">
