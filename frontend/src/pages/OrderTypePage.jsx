@@ -36,11 +36,9 @@ const OrderTypePage = () => {
           <img 
             src={restaurantInfo.logo} 
             alt={restaurantInfo.name}
-            className="h-12 mx-auto mb-1 object-contain"
-            style={{ filter: 'brightness(0) invert(1)' }}
+            className="h-16 mx-auto mb-2 object-contain"
           />
-          <h1 className="text-xl font-semibold text-gray-800">{restaurantInfo.name}</h1>
-          <p className="text-sm text-gray-500 mt-0.5">{restaurantInfo.tagline}</p>
+          <p className="text-sm text-gray-600 mt-1">{restaurantInfo.tagline}</p>
         </div>
       </div>
 
