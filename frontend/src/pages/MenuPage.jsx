@@ -60,15 +60,19 @@ const MenuPage = () => {
       <header className="bg-white shadow-sm sticky top-0 z-50 border-b">
         <div className="container mx-auto px-4 py-2">
           <div className="flex items-center justify-between">
-            {/* Logo and Outlet */}
+            {/* Logo - Left Side */}
             <div className="flex items-center space-x-3">
               <img 
                 src={restaurantInfo.logo} 
                 alt={restaurantInfo.name}
-                className="h-8 object-contain cursor-pointer"
+                className="h-10 object-contain cursor-pointer"
                 onClick={() => navigate('/')}
                 style={{ filter: 'brightness(0) invert(1)' }}
               />
+            </div>
+
+            {/* Outlet Selector */}
+            <div className="flex items-center space-x-3">
               <div>
                 <select
                   className="text-xs font-medium text-gray-700 border border-gray-300 rounded px-2 py-1"
