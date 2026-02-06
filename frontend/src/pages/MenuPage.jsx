@@ -67,7 +67,6 @@ const MenuPage = () => {
                 alt={restaurantInfo.name}
                 className="h-10 object-contain cursor-pointer"
                 onClick={() => navigate('/')}
-                style={{ filter: 'brightness(0) invert(1)' }}
               />
             </div>
 
