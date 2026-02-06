@@ -126,7 +126,6 @@ const ReservationPage = () => {
               src={restaurantInfo.logo} 
               alt={restaurantInfo.name}
               className="h-10 object-contain"
-              style={{ filter: 'brightness(0) invert(1)' }}
             />
             <div className="w-16"></div>
           </div>
