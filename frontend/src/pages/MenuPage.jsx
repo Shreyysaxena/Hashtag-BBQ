@@ -191,25 +191,25 @@ const MenuPage = () => {
 
         {/* Menu Items Grid */}
         <main className="flex-1 overflow-y-auto">
-          <div className="container mx-auto px-4 py-6">
+          <div className="container mx-auto px-4 py-4">
             {/* Category Header */}
-            <div className="mb-6">
-              <h1 className="text-2xl font-bold text-gray-800">
+            <div className="mb-4">
+              <h1 className="text-lg font-semibold text-gray-800">
                 {menuCategories.find(c => c.id === selectedCategory)?.name}
               </h1>
-              <div className="h-1 w-24 bg-[#579c2c] mt-2 rounded-full"></div>
+              <div className="h-0.5 w-16 bg-[#579c2c] mt-1 rounded-full"></div>
             </div>
 
             {/* Items Grid */}
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4">
               {getFilteredItems().map((item) => (
                 <div
                   key={item.id}
-                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200"
+                  className="bg-white rounded-lg shadow-sm border overflow-hidden hover:shadow-md transition-shadow duration-200"
                 >
                   <div className="flex">
                     {/* Item Image */}
-                    <div className="w-32 h-32 flex-shrink-0">
+                    <div className="w-24 h-24 flex-shrink-0">
                       <img
                         src={item.image}
                         alt={item.name}
@@ -218,44 +218,44 @@ const MenuPage = () => {
                     </div>
 
                     {/* Item Details */}
-                    <div className="flex-1 p-4 flex flex-col">
-                      <div className="flex items-start justify-between mb-2">
+                    <div className="flex-1 p-3 flex flex-col">
+                      <div className="flex items-start justify-between mb-1">
                         <div className="flex-1">
-                          <div className="flex items-center space-x-2">
+                          <div className="flex items-center space-x-1.5">
                             {/* Veg/Non-Veg Indicator */}
-                            <div className={`w-4 h-4 border-2 flex items-center justify-center ${
+                            <div className={`w-3 h-3 border flex items-center justify-center ${
                               item.veg ? 'border-green-600' : 'border-red-600'
                             }`}>
-                              <div className={`w-2 h-2 rounded-full ${
+                              <div className={`w-1.5 h-1.5 rounded-full ${
                                 item.veg ? 'bg-green-600' : 'bg-red-600'
                               }`}></div>
                             </div>
-                            <h3 className="font-bold text-gray-800">{item.name}</h3>
+                            <h3 className="font-semibold text-sm text-gray-800">{item.name}</h3>
                           </div>
                           {item.bestseller && (
-                            <Badge className="mt-1 bg-yellow-500">Bestseller</Badge>
+                            <Badge className="mt-0.5 bg-yellow-500 text-[10px] px-1.5 py-0">Bestseller</Badge>
                           )}
                         </div>
                       </div>
 
-                      <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+                      <p className="text-gray-600 text-xs mb-2 line-clamp-2">
                         {item.description}
                       </p>
 
                       <div className="mt-auto flex items-center justify-between">
                         <div>
-                          <p className="text-lg font-bold text-gray-800">
+                          <p className="text-base font-bold text-gray-800">
                             ₹{item.price}
                           </p>
                           {item.customizable && (
-                            <p className="text-xs text-[#579c2c] font-medium">
-                              Customization available
+                            <p className="text-[10px] text-[#579c2c] font-medium">
+                              Customizable
                             </p>
                           )}
                         </div>
                         <Button
                           onClick={() => handleAddToCart(item)}
-                          className="bg-[#579c2c] hover:bg-[#579c2c]/90 text-white px-6"
+                          className="bg-[#579c2c] hover:bg-[#579c2c]/90 text-white px-4 py-1 h-8 text-xs"
                         >
                           Add
                         </Button>
@@ -268,7 +268,7 @@ const MenuPage = () => {
 
             {getFilteredItems().length === 0 && (
               <div className="text-center py-12">
-                <p className="text-gray-500 text-lg">No items found</p>
+                <p className="text-gray-500 text-sm">No items found</p>
               </div>
             )}
           </div>
